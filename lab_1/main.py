@@ -1,49 +1,66 @@
 # Запропонуйте ввести ім'я користувача та виведіть вітальне повідомлення. Hello [ім'я].
-print(f"Hello, {input("Please enter your name: ").capitalize()}!")
+name_inp = input("Please enter your name: ").capitalize()
+print(f"Hello, {name_inp}!")
 print("---")
 
 # Запропонуйте користувачеві ввести ім'я та прізвище, після чого виведіть вітальне повідомлення. Hello [ім'я] [прізвище].
-print(f"Hello, {input("Please enter your name: ").capitalize()} {input("Please enter your surname: ").capitalize()}!")
+first_name_inp = input("Please enter your name: ").capitalize()
+last_name_inp = input("Please enter your surname: ").capitalize()
+print(f"Hello, {first_name_inp} {last_name_inp}!")
 print("---")
 
-# Напишіть код, який виводить запитання: «Як звуть людей, які відрізняються від усіх?», а в наступному рядку виводить відповідь: «Неповторні)» Спробуйте обійтися одним рядком коду.
+# Напишіть код, який виводить запитання та відповідь в одному рядку коду.
 print("Як звуть людей, які відрізняються від усіх?\nНеповторні)")
 print("---")
 
 # Запропонуйте ввести два числа. Складіть ці числа та виведіть результат у вигляді The total is [результат].
-print(f"The total is: {int(input("Please enter number X: ")) + int(input("Please enter number Y: "))}")
+x_inp = int(input("Please enter number X: "))
+y_inp = int(input("Please enter number Y: "))
+print(f"The total is {x_inp + y_inp}")
 print("---")
 
-# Запропонуйте ввести три числа. Складіть перші два числа, а потім помножте суму на третє число. Виведіть результат у вигляді The answer is [результат].
-print(f"The answer is: {(int(input("Please enter number X: ")) + int(input("Please enter number Y: "))) * int(input("Please enter number Z: "))}")
+# Запропонуйте ввести три числа. Складіть перші два та помножте суму на третє.
+x_inp = int(input("Please enter number X: "))
+y_inp = int(input("Please enter number Y: "))
+z_inp = int(input("Please enter number Z: "))
+print(f"The answer is {(x_inp + y_inp) * z_inp}")
 print("---")
 
-# Запитайте скільки шматків піци було у користувача і скільки шматків він з'їв. Обчисліть, скільки шматків піци в нього залишилося, та виведіть результат у формі, зручній для користувача.
-print(f"Pizza's slices left: {int(input("Enter total pizza's slices number: ")) - int(input("Enter pizza's slices number you ate: "))}")
+# Запитайте скільки шматків піци було і скільки з'їв користувач. Виведіть, скільки залишилось.
+total_inp = int(input("Enter total pizza slices number: "))
+eaten_inp = int(input("Enter number of slices you ate: "))
+print(f"You have {total_inp - eaten_inp} slices left.")
 print("---")
 
-# Запропонуйте користувачеві ввести його ім'я та вік. Збільште вік на 1 та виведіть повідомлення: [ім'я] next birthday you will be [новий вік].
-print(f"{input("Enter your name: ").capitalize()} next birthday you will be {int(input("Enter your age: ")) + 1}")
+# Запропонуйте ввести ім'я та вік. Збільште вік на 1.
+name_inp = input("Enter your name: ").capitalize()
+age_inp = int(input("Enter your age: "))
+print(f"{name_inp}, next birthday you will be {age_inp + 1}")
 print("---")
 
-# Запропонуйте користувачеві ввести загальну суму рахунку та запросіть загальну кількість учасників обіду. Розділіть суму рахунку на кількість учасників та виведіть суму, яку має заплатити кожен учасник.
-print(f"Each person should pay: {int(input("Enter total bill amount: ")) / int(input("Enter persons count: "))} hrn.")
+# Запропонуйте ввести загальну суму рахунку та кількість учасників.
+bill_inp = float(input("Enter total bill amount: "))
+people_inp = int(input("Enter persons count: "))
+print(f"Each person should pay {bill_inp / people_inp:.2f} hrn.")
 print("---")
 
-# Напишіть програму, яка пропонує ввести проміжок часу в днях, а потім виводить кількість годин, хвилин та секунд у цьому проміжку.
-inp = int(input("Enter days number: "))
-print(f"Hours: {inp * 24}, minutes: {inp * 24 * 60}, seconds: {inp * 24 * 60 * 60}")
+# Запропонуйте ввести кількість днів та виведіть години, хвилини і секунди.
+days_inp = int(input("Enter days number: "))
+print(f"Hours: {days_inp * 24}, minutes: {days_inp * 24 * 60}, seconds: {days_inp * 24 * 60 * 60}")
 print("---")
 
-# В одному кілограмі 2204 фунта. Запропонуйте ввести вагу в кілограмах і переведіть його в фунти.
-print(f"Converted to kilograms: {round(int(input("Please enter weight in pounds: ")) / 2204, 3)}")
+# В одному кілограмі 2.204 фунта. Переведіть кілограми в фунти.
+kg_inp = float(input("Please enter weight in kilograms: "))
+print(f"Converted to pounds: {round(kg_inp * 2.204, 3)}")
 print("---")
 
-# Запропонуйте користувачеві ввести число більше 100, а потім число менше 10. Повідомте, скільки разів «менше» вміщується у «більшому», у зручному форматі.
-x_inp = int(input("Enter number more then 100: "))
-if not x_inp > 100:
-    raise Exception("Input number less or equal to 100")
-y_inp = int(input("Enter number less then 10: "))
-if not y_inp < 10:
-    raise Exception("Input number more or equal to 10")
-print(f"Number {x_inp} contain number {y_inp} {x_inp // y_inp} times.")
+# Запропонуйте ввести число >100, потім число <10. Виведіть, скільки разів менше вміщується в більшому.
+big_inp = int(input("Enter number more than 100: "))
+if big_inp <= 100:
+    raise ValueError("Number must be greater than 100")
+
+small_inp = int(input("Enter number less than 10: "))
+if small_inp >= 10:
+    raise ValueError("Number must be less than 10")
+
+print(f"Number {small_inp} fits into {big_inp} exactly {big_inp // small_inp} times.")
