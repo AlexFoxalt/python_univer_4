@@ -51,7 +51,7 @@ print("---")
 
 # В одному кілограмі 2.204 фунта. Переведіть кілограми в фунти.
 kg_inp = float(input("Please enter weight in kilograms: "))
-print(f"Converted to pounds: {round(kg_inp * 2.204, 3)}")
+print(f"Converted to pounds: {kg_inp * 2.204:.3f}")
 print("---")
 
 # Запропонуйте ввести число >100, потім число <10. Виведіть, скільки разів менше вміщується в більшому.
